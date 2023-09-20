@@ -598,8 +598,8 @@ public class Aplicacion extends javax.swing.JFrame {
 
 
     private void btnSumarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSumarMouseClicked
-        app = this;
-        executeCommand(new SumarCommand(app));
+        //app = this;
+        executeCommand(new SumarCommand(this));
     }//GEN-LAST:event_btnSumarMouseClicked
 
     private void btnRestarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRestarMouseClicked
@@ -722,7 +722,7 @@ public class Aplicacion extends javax.swing.JFrame {
 
     private void historialButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historialButtonActionPerformed
         app = this;
-        executeCommand(new HistorialCommand(app, memory));
+        executeCommand(new HistorialCommand(app));
     }//GEN-LAST:event_historialButtonActionPerformed
 
     public static void main(String args[]) {

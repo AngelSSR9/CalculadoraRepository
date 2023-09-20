@@ -7,26 +7,21 @@ import javax.swing.JPanel;
 
 public class HistorialCommand extends Command{
     
-    Memory memory;
-    
-    public HistorialCommand(Aplicacion app, Memory memory) {
+    public HistorialCommand(Aplicacion app) {
         super(app);
-        this.memory = memory;
     }
 
     private String obtenerHistorial(){
         
         String historial = "<html>";
-        for(Command command : memory.getMemories()){
-            
-            String n1 = command.getNumero1();
-            String n2 = command.getNumero2();
+        for(Command command : app.memory.getMemories()){
+           
             if(command instanceof SumarCommand){
                 
-                historial += n1 + " + " + n2 + " = " + command.devolver() + "<br><br>";
+                historial += command.numero1 + " + " + command.numero2 + " = " + command.devolver() + "<br><br>";
             }
             else if(command instanceof RestarCommand){
-                historial += n1 + " - " + n2 + " = " + command.devolver() + "<br><br>";
+                historial += command.numero1 + " - " + command.numero2 + " = " + command.devolver() + "<br><br>";
             }
             
             
